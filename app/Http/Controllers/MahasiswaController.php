@@ -26,7 +26,7 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        return view('mahasiswa.add');
+        return view('mahasiswa.create');
     }
 
     /**
@@ -42,11 +42,11 @@ class MahasiswaController extends Controller
             'mhsw_nim' => 'required',
             'mhsw_nama' => 'required',
             'mhsw_alamat' => 'nullable',
-            'mhsw_nama' => 'nullable'
+            'mhsw_prodi' => 'nullable'
         ],
         [ 
             'mhsw_nim.required' => 'NIM Wajib Diisi',
-            'mhsw_nama.required' => 'Nama Wajib Diisi',
+            'mhsw_nama.required' => 'Nama Wajib Diisi'
         ]);
 
         Mahasiswa::create([
@@ -69,7 +69,7 @@ class MahasiswaController extends Controller
     {
         $row = Mahasiswa::find($id);
 
-        return view('mahasiswa.detail', compact('row'));
+        return view('mahasiswa.show', compact('row'));
     }
 
     /**
@@ -98,11 +98,11 @@ class MahasiswaController extends Controller
             'mhsw_nim' => 'required',
             'mhsw_nama' => 'required',
             'mhsw_alamat' => 'nullable',
-            'mhsw_nama' => 'nullable'
+            'mhsw_prodi' => 'nullable'
         ],
         [ 
             'mhsw_nim.required' => 'NIM Wajib Diisi',
-            'mhsw_nama.required' => 'Nama Wajib Diisi',
+            'mhsw_nama.required' => 'Nama Wajib Diisi'
         ]);
 
         $row = Mahasiswa::findOrFail($id);
@@ -127,7 +127,7 @@ class MahasiswaController extends Controller
         $row = Mahasiswa::findOrFail($id);
         $row->delete();
 
-        Alert::success('Sucsess', 'Your record has been deleted');
+        Alert::success('Sukses', 'Data berhasil dihapus!');
         return redirect('/dashboard/mahasiswa');
     }
 }

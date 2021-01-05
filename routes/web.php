@@ -11,19 +11,19 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Auth::routes();
 
-Route::get('/', 'WebboardController@index')->name('index');
-
 Route::prefix('dashboard')->middleware(['web', 'auth'])->group(function () {
+	
+    Route::get('/', 'DashboardController@index');
+    Route::get('/profile', 'ProfileController@index');
+    Route::patch('/profile', 'ProfileController@update');
+    Route::resource('/mahasiswa', 'MahasiswaController');
+    Route::resource('/user', 'UserController');
 
-	Route::get('/', 'DashboardController@index')->name('dashboard');
-	Route::get('/mahasiswa', 'MahasiswaController@index')->name('mahasiswa');
-	Route::get('/mahasiswa/create', 'MahasiswaController@create');
-	Route::post('/mahasiswa', 'MahasiswaController@store');
-	Route::get('/mahasiswa/{id}/edit', 'MahasiswaController@edit');
-	Route::patch('/mahasiswa/{id}', 'MahasiswaController@update');
-	Route::get('/mahasiswa/{id}', 'MahasiswaController@show');
-	Route::delete('/mahasiswa/{id}/delete', 'MahasiswaController@destroy');
 
 });

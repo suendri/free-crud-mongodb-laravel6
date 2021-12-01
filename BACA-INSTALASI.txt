@@ -7,7 +7,7 @@ A. Kebutuhan Sistem
 1. Kami membuat dan mengembangkan Sistem ini pada Sistem Operasi windows 10, 
    Silakan kondisikan jika anda menggunakan sistem operasi lain.
 2. Kami menggunakan XAMPP 7.4.25 dan MongoDB driver for PHP 1.11.1
-2. Kami menggunakan MongoDB Community Server 4.4
+2. Kami menggunakan MongoDB Community Server 5.0.4
 3. Kami juga menganjurkan untuk menggunakan Browser Google Chrome terbaru
    untuk tampilan lebih sempurna.
 4. Kami menganggap anda sudah paham Laravel 6 Dasar dan MongoDB Dasar.
@@ -32,7 +32,7 @@ C. Menjalankan Program
 1. Start Apache.
 2. Start MongoDB Community Server.
 3. Extract crud-mongodb-laravel6.zip ke folder C:/xampp/htdoc/
-4. Buat Database baru : laravel6
+4. Buat Database dan Collection baru : crudlaravel6 dan users di MongoDB
 5. Jalankan : php artisan migrate atau php artisan migrate:fresh --seed
 6. Buka Browser, panggil via address : ttp://localhost/crud-mongodb-laravel6/public atau buat domain lokal anda.
 
@@ -45,6 +45,13 @@ D. Login
    Anda bisa registrasi langsung dari menu Registrasi.
 
 ---------------------------------------------------------------------------------------------------
+MAU FITUR LEBIH LENGKAP?
+Free Create Read Update Delete Laravel 8 using Database Mongodb
+
+https://www.tokopedia.com/gosoftware/gosoftware-crud-menggunakan-laravel-8-dan-mongodb
+---------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------
 || TERIMAKASIH
 ---------------------------------------------------------------------------------------------------
 
@@ -52,4 +59,3 @@ SUENDRI
 
 Gosoftware Media
 http://gosoftware.web.id
-http://phpbego.wordpress.com
